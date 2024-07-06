@@ -29,20 +29,17 @@ pipeline {
         }
 
         stage('Test') {
-             agent {
+            agent {
                 docker {
                     image 'node:18-alpine'
                     args '-u root:root' // Run as root to avoid permission issues
                     reuseNode true
                 }
-             }
-
+            }
 
             steps {
-                sh '''
-                   test -f build/index.html 
-                   npm test
-                   '''
+                sh 'test -f build/index.html'
+                sh 'npm test'
             }
         }
     }
