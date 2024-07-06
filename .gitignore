@@ -43,6 +43,5 @@ Thumbs.db
 .angular
 .vscode
 dist
-node_modules
 package-lock.json
 .editorconfig
