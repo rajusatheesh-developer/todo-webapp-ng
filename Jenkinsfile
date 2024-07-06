@@ -38,7 +38,7 @@ pipeline {
             }
 
             steps {
-                sh 'test -f build/index.html'
+                sh 'test -f dist/todo-webapp-ng/index.html'
                 sh 'npm test'
             }
         }
